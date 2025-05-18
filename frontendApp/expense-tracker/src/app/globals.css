@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F5F5F5;
+  --foreground: #171717;
+  --primary: #64B5F6;
+  --accent: #A5D6A7;
+  --error: #EF9A9A;
+  --font-sans: 'Inter', Arial, Helvetica, sans-serif;
+  --font-mono: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.button-primary {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.button-primary:hover {
+  background: #42a5f5;
+}
+
+.button-accent {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.button-accent:hover {
+  background: #81c784;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(100,181,246,0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+label {
+  font-weight: 500;
+}
+
+input, select, textarea {
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: var(--font-sans);
+}
